@@ -1,4 +1,4 @@
-package programas;
+package app;
 
 import classes.Cao;
 import classes.Cumprimentador;
