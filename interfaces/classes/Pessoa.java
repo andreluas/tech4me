@@ -1,24 +1,25 @@
-package interfaces.classes;
+package classes;
 
 public class Pessoa implements Cumprimentador {
-    private String nome;
-    private int idade;
+  private String nome;
+  private String cpf;
 
-    public String getNome() {
-        return nome;
-    }
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-    public int getIdade() {
-        return idade;
-    }
-    public void setIdade(int idade) {
-        this.idade = idade;
-    }
+  public String getNome() {
+    return nome;
+  }
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
+  public String getCpf() {
+    return cpf;
+  }
 
-    @Override
-    public String cumprimentar() {
-        return "Olá, suave?";
-    }     
+  public void setCpf(String cpf) {
+    this.cpf = cpf;
+  }
+  
+  @Override
+  public String cumprimentar() {
+    return "Olá, estranho.";
+  }
 }

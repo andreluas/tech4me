@@ -1,5 +1,5 @@
-package interfaces.classes;
+package classes;
 
 public interface Cumprimentador {
-    String cumprimentar();
+  String cumprimentar();
 }
