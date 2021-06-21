@@ -1,4 +1,4 @@
-package app;
+package exercicios.lista_1.app;
 
 /**
  * Faça um programa que solicite um valor de 1 a 12 correspondendo a

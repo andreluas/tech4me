@@ -1,4 +1,4 @@
-package classes;
+package exercicios.lista_1.classes;
 
 public class Aluno {
     private String nome;

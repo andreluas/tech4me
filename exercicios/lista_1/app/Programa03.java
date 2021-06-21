@@ -1,4 +1,4 @@
-package app;
+package exercicios.lista_1.app;
 
 /**
  * Faça um programa que receba a largura e o comprimento de um lote de

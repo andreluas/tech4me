@@ -1,4 +1,4 @@
-package app;
+package exercicios.lista_1.app;
 
 /**
  * Faça um programa para ler três valores decimais que correspondem aos

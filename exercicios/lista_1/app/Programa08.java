@@ -1,4 +1,4 @@
-package app;
+package exercicios.lista_1.app;
 
 /**
  * Crie um programa que apresente o fatorial de um número N informado

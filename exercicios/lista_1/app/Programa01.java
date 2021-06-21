@@ -1,4 +1,4 @@
-package app;
+package exercicios.lista_1.app;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package app;
+package exercicios.lista_1.app;
 
 /**
  *  Faça um programa que receba a quantidade e o valor de 10 produtos. O

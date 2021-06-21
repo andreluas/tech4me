@@ -1,4 +1,4 @@
-package app;
+package exercicios.lista_1.app;
 
 /**
  * Crie um programa que imprima os ímpares de 1 até N, sendo N solicitado

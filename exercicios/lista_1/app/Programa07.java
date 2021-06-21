@@ -1,4 +1,4 @@
-package app;
+package exercicios.lista_1.app;
 
 /**
  * Faça um programa que leia N nomes de alunos e suas médias finais –
@@ -8,7 +8,7 @@ alunos.
  */
 
 import java.util.Scanner;
-import classes.Aluno;
+import exercicios.lista_1.classes.Aluno;
 
 public class Programa07 {
     public static void main(String[] args) {
