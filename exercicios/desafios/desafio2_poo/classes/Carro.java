@@ -1,4 +1,4 @@
-package exercicios.desafio2_poo.classes;
+package exercicios.desafios.desafio2_poo.classes;
 
 import java.util.InputMismatchException;
 

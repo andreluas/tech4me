@@ -1,10 +1,10 @@
-package exercicios.desafio2_poo.app;
+package exercicios.desafios.desafio2_poo.app;
 
 import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import exercicios.desafio2_poo.classes.*;
+import exercicios.desafios.desafio2_poo.classes.*;
 
 public class AppHeranca {
     public static void main(String[] args) throws InterruptedException, IOException {

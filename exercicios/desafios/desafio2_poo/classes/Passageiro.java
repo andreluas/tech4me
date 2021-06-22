@@ -1,4 +1,4 @@
-package exercicios.desafio2_poo.classes;
+package exercicios.desafios.desafio2_poo.classes;
 
 public class Passageiro extends Pessoa {
     private int codigoCliente;

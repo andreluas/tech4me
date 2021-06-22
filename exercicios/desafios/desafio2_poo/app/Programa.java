@@ -1,4 +1,4 @@
-package exercicios.desafio2_poo.app;
+package exercicios.desafios.desafio2_poo.app;
 
 /**
  * Utilizando o arquivo anexado nesta atividade - que é uma atividade anterior

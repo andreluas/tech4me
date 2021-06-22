@@ -1,6 +1,6 @@
-package exercicios.desafio2_poo.app;
+package exercicios.desafios.desafio2_poo.app;
 
-import exercicios.desafio2_poo.classes.*;
+import exercicios.desafios.desafio2_poo.classes.*;
 
 public class AppCarro {
     public static void main(String[] args) {
