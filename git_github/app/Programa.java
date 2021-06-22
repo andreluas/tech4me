@@ -7,7 +7,7 @@ public class Programa {
 
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
-    int opcao;
+    int opcao, contPessoa;
 
     do {
       System.out.println("Escolha uma opção:");
@@ -19,24 +19,29 @@ public class Programa {
       opcao = sc.nextInt();
       sc.nextLine(); // Limpa o ENTER que fica na entrada
       
-      Pessoas pessoas = new Pessoas();
-      Pessoas pessoa[] = new Pessoas[10];
+      contPessoa = 1;
+      Pessoas pessoas[] = new Pessoas[contPessoa];
 
       switch (opcao) {
         case 0:
           System.out.println("Fim do programa!");
           break;
         case 1:
-          pessoa[0] = new Pessoas();
+          contPessoa = contPessoa + 1;
+
+          Pessoas pessoa = new Pessoas();
+
           System.out.print("Nome: ");
-          pessoas.setNome(sc.nextLine());
+          pessoa.setNome(sc.nextLine());
           System.out.print("Sobrenome: ");
-          pessoas.setSobreNome(sc.nextLine());
+          pessoa.setSobreNome(sc.nextLine());
           System.out.print("Telefone: ");
-          pessoas.setTel(sc.nextDouble());
+          pessoa.setTel(sc.nextDouble());
+
+          pessoas[contPessoa] = pessoa;
           break;
         case 2:
-          System.out.println(pessoas);
+
           break;
         default:
           System.out.println("Opção inválida!");
