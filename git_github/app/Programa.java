@@ -10,7 +10,7 @@ public class Programa {
     int opcao, contPessoa;
 
     do {
-      System.out.println("Escolha uma opção:");
+      System.out.println("\nEscolha uma opção:");
       System.out.println("1 - Incluir pessoa");
       System.out.println("2 - Listar todos os cadastrados");
       System.out.println("0 - Sair");
@@ -19,29 +19,31 @@ public class Programa {
       opcao = sc.nextInt();
       sc.nextLine(); // Limpa o ENTER que fica na entrada
       
-      contPessoa = 1;
-      Pessoas pessoas[] = new Pessoas[contPessoa];
+      Pessoas pessoas[] = new Pessoas[2];
+      int contador = 0;
+      contPessoa = contador;
 
       switch (opcao) {
         case 0:
           System.out.println("Fim do programa!");
           break;
         case 1:
-          contPessoa = contPessoa + 1;
+            Pessoas pessoa = new Pessoas();
 
-          Pessoas pessoa = new Pessoas();
+            System.out.print("Nome: ");
+            pessoa.setNome(sc.nextLine());
+            System.out.print("Sobrenome: ");
+            pessoa.setSobreNome(sc.nextLine());
+            System.out.print("Telefone: ");
+            pessoa.setTel(sc.nextDouble());
 
-          System.out.print("Nome: ");
-          pessoa.setNome(sc.nextLine());
-          System.out.print("Sobrenome: ");
-          pessoa.setSobreNome(sc.nextLine());
-          System.out.print("Telefone: ");
-          pessoa.setTel(sc.nextDouble());
-
-          pessoas[contPessoa] = pessoa;
+            pessoas[contPessoa] = pessoa;
+            contador = contador + 1;            
           break;
         case 2:
-
+          for(int x=0; x<pessoas.length; x++){
+            System.out.println(pessoas[x]);
+          }
           break;
         default:
           System.out.println("Opção inválida!");
