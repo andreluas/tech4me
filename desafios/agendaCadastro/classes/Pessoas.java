@@ -1,4 +1,4 @@
-package git_github.classes;
+package desafios.agendaCadastro.classes;
 
 public class Pessoas {
     private String nome;
@@ -22,10 +22,5 @@ public class Pessoas {
     }
     public void setTel(double tel) {
         this.tel = tel;
-    }
-
-    @Override
-    public String toString() {
-        return String.format("Nome: %s | Sobrenome: %s | Tel: %s", getNome(), getSobreNome(), getTel());
     }
 }
