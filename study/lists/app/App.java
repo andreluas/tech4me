@@ -1,11 +1,11 @@
-package listCollections.app;
+package lists.app;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
 
-import listCollections.classes.*;
+import lists.classes.*;
 
 public class App {
     public static void main(String[] args) {
