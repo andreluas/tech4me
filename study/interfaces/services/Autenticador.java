@@ -14,6 +14,11 @@ public class Autenticador {
 
     public boolean validLogin(String token){
         boolean truePass = false;
+        
+        for(int i=0; !truePass && i<users.size(); i++){
+            truePass = users.toString().equals(token);
+        }
+        
         return truePass;
     }
 }
