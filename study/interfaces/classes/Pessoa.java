@@ -1,8 +1,7 @@
 package classes;
 
 public class Pessoa {
-    private String nome;
-    private String cpf;    
+    private String nome;  
     private int idade;
 
     public String getNome() {
@@ -10,12 +9,6 @@ public class Pessoa {
     }
     public void setNome(String nome) {
         this.nome = nome;
-    }
-    public String getCpf() {
-        return cpf;
-    }
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
     }
     public int getIdade() {
         return idade;
