@@ -31,12 +31,6 @@ public class Venda  {
         System.out.printf("Valor total: R$ %.2f", valorTotal);
     }
 
-    public void subtraiEstoque() {
-        int totalEstoque = produto.getQtdEstoque();
-        int subtraiEstoque = totalEstoque--;
-        produto.setQtdEstoque(subtraiEstoque);
-    }
-
     @Override
     public String toString() {
         String relVendas = "";

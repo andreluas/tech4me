@@ -31,6 +31,12 @@ public class Produto {
         this.qtdEstoque = qtdEstoque;
     }    
 
+    public void subtraiEstoque() {
+        int totalEstoque = getQtdEstoque();
+        int subtraiEstoque = totalEstoque--;
+        setQtdEstoque(subtraiEstoque);
+    }
+
     @Override
     public String toString() {
         return String.format("\nCódigo: %d\nNome: %s\nValor: R$ %.2f\nEstoque: %d\n--------------------", getCodigo(), getNome(), getValor(), getQtdEstoque());

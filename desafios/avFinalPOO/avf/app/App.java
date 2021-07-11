@@ -144,7 +144,7 @@ public class App {
                     venda.setQtdVenda(sc.nextInt());
                     venda.setData(LocalDate.now());
                     venda.valorVenda();
-                    venda.subtraiEstoque();
+                    produto.subtraiEstoque();
                     System.out.print("\nData da venda: " + LocalDate.now() + "\n");
 
                     vendas.add(venda);
