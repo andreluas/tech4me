@@ -100,9 +100,18 @@ public class App {
             }
 
             if(opcao == 4){
-                System.out.println("###############################\nRELATÓRIO DE VENDAS - DETALHADO\n###############################");
-                vendas.forEach(venda -> System.out.println(venda));
-                System.out.printf("-------------------------------\n Valor médio das vendas: R$ %.2f"); 
+                if(vendas.isEmpty()){
+                    System.out.println("Nenhuma venda realizada.");
+                } else {
+                    System.out.println("###############################\nRELATÓRIO DE VENDAS - DETALHADO\n###############################\n");
+                    vendas.forEach(venda -> System.out.println(venda)); 
+                }
+
+                System.out.print("\n\n0 - Voltar ao menu: ");
+                int menu = sc.nextInt();
+                if(menu == 0){
+                    voltarMenu(sc);
+                }
             }
 
             if(opcao == 5){

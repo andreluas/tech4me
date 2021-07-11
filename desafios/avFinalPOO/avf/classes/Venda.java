@@ -37,8 +37,9 @@ public class Venda  {
 
         relVendas = relVendas + "Data: " + getData();
         relVendas = relVendas + "\nProduto: " + produto.getNome();
-        relVendas = relVendas + "\nQuantidade: " + getQtdVenda();
-        relVendas = relVendas + "\nValor unitário: " + produto.getValor();
+        relVendas = relVendas + "\nQuantidade: " + getQtdVenda() + " unidade(s)";
+        relVendas = relVendas + "\nValor unitário: R$ " + produto.getValor();
+        System.out.println("-------------------------------\n");
 
         return relVendas;
     }
