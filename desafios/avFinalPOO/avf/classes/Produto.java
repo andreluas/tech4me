@@ -31,9 +31,9 @@ public class Produto {
         this.qtdEstoque = qtdEstoque;
     }    
 
-    public void subtraiEstoque() {
+    public void subtraiEstoque(int qtd) {
         int totalEstoque = getQtdEstoque();
-        int subtraiEstoque = totalEstoque--;
+        int subtraiEstoque = totalEstoque - qtd;
         setQtdEstoque(subtraiEstoque);
     }
 
