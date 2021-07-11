@@ -128,8 +128,7 @@ public class App {
                 System.out.print("Produto [Cód]: ");
                 int codProduto = sc.nextInt();
                 
-                for(int i=0; !key && i<produtos.size(); i++){
-                    
+                for(int i=0; !key && i<produtos.size(); i++){    
                     key = codProduto == produtos.get(i).getCodigo();
 
                     if(produtos.get(i).getQtdEstoque() <= 0){
