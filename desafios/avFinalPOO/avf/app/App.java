@@ -114,7 +114,7 @@ public class App {
 
 
                     Map<LocalDate, Double> valoresMedios = vendas.stream().collect(Collectors.groupingBy(Venda::getData, Collectors.averagingDouble(Venda::getValorTotal)));
-                    valoresMedios.entrySet().forEach(venda -> System.out.printf("\n\nData: %s - Valor médio: %.2f\n", venda.getKey().format(df), venda.getValue()));
+                    valoresMedios.entrySet().forEach(venda -> System.out.printf("\n\nData: %s  \nValor médio no período: %.2f", venda.getKey().format(df), venda.getValue()));
                 }
 
                 System.out.print("\n\n0 - Voltar ao menu: ");
