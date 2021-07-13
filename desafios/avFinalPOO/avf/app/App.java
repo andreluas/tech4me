@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
@@ -105,6 +106,9 @@ public class App {
                 } else {
                     System.out.println("###############################\nRELATÓRIO DE VENDAS - DETALHADO\n###############################\n");
                     vendas.forEach(venda -> System.out.println(venda)); 
+
+                    Map<LocalDate, List<Venda>> relatorioVendas = vendas.stream().collect(Collectors.groupingBy(Venda::getData));
+                    relatorioVendas.entrySet().forEach(venda -> System.out.printf("TESTE: %s - TESTE2: %s", venda.getKey(), venda.getValue()));
                 }
 
                 System.out.print("\n\n0 - Voltar ao menu: ");
@@ -151,7 +155,7 @@ public class App {
                     System.out.print("\nQtd: ");
                     venda.setQtdVenda(sc.nextInt());
                     venda.setData(LocalDate.now());
-                    venda.valorVenda();
+                    venda.setValorTotal(0);
                     System.out.print("\nData da venda: " + LocalDate.now() + "\n");
                     produto.subtraiEstoque(venda.getQtdVenda());
                     vendas.add(venda);

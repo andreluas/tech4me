@@ -6,6 +6,7 @@ public class Venda  {
     private LocalDate data;
     private Produto produto;
     private int qtdVendida;
+    private double valorTotal;
 
     public LocalDate getData() {
         return data;
@@ -25,10 +26,13 @@ public class Venda  {
     public void setProduto(Produto produto) {
         this.produto = produto;
     }
-
-    public void valorVenda() {
-        double valorTotal = qtdVendida * produto.getValor();
-        System.out.printf("Valor total: R$ %.2f", valorTotal);
+    public double getValorTotal() {
+        return valorTotal;
+    }
+    public void setValorTotal(double valorTotal) {
+        double valorVenda = qtdVendida * produto.getValor();
+        System.out.printf("Valor total: R$ %.2f", valorVenda);
+        this.valorTotal = valorVenda;
     }
 
     @Override
@@ -39,6 +43,7 @@ public class Venda  {
         relVendas = relVendas + "\nProduto: " + produto.getNome();
         relVendas = relVendas + "\nQuantidade: " + getQtdVenda() + " unidade(s)";
         relVendas = relVendas + "\nValor unitário: R$ " + produto.getValor();
+        relVendas = relVendas + "\nValor total: R$ " + getValorTotal();
         System.out.println("-------------------------------\n");
 
         return relVendas;
