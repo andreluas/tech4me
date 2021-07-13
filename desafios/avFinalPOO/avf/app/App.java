@@ -4,6 +4,7 @@ import static java.util.Comparator.comparing;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -15,6 +16,7 @@ import avf.classes.Venda;
 
 public class App {
     public static void main(String[] args) throws InterruptedException, IOException {
+        DateTimeFormatter df = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         Scanner sc = new Scanner(System.in);
         List<Produto> produtos = new ArrayList<>();
         List<Venda> vendas = new ArrayList<>();
@@ -105,10 +107,14 @@ public class App {
                     System.out.println("Nenhuma venda realizada.");
                 } else {
                     System.out.println("###############################\nRELATÓRIO DE VENDAS - DETALHADO\n###############################\n");
-                    vendas.forEach(venda -> System.out.println(venda)); 
+                    // vendas.forEach(venda -> System.out.println(venda)); 
 
                     Map<LocalDate, List<Venda>> relatorioVendas = vendas.stream().collect(Collectors.groupingBy(Venda::getData));
-                    relatorioVendas.entrySet().forEach(venda -> System.out.printf("TESTE: %s - TESTE2: %s", venda.getKey(), venda.getValue()));
+                    relatorioVendas.entrySet().forEach(venda -> System.out.printf("Período de emissão: %s \n%s", venda.getKey().format(df), venda.getValue()));
+
+
+                    Map<LocalDate, Double> valoresMedios = vendas.stream().collect(Collectors.groupingBy(Venda::getData, Collectors.averagingDouble(Venda::getValorTotal)));
+                    valoresMedios.entrySet().forEach(venda -> System.out.printf("\n\nData: %s - Valor médio: %.2f\n", venda.getKey().format(df), venda.getValue()));
                 }
 
                 System.out.print("\n\n0 - Voltar ao menu: ");
@@ -156,7 +162,7 @@ public class App {
                     venda.setQtdVenda(sc.nextInt());
                     venda.setData(LocalDate.now());
                     venda.setValorTotal(0);
-                    System.out.print("\nData da venda: " + LocalDate.now() + "\n");
+                    System.out.print("\nData da venda: " + LocalDate.now().format(df) + "\n");
                     produto.subtraiEstoque(venda.getQtdVenda());
                     vendas.add(venda);
 
