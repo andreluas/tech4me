@@ -107,7 +107,6 @@ public class App {
                     System.out.println("Nenhuma venda realizada.");
                 } else {
                     System.out.println("###############################\nRELATÓRIO DE VENDAS - DETALHADO\n###############################\n");
-                    // vendas.forEach(venda -> System.out.println(venda)); 
 
                     Map<LocalDate, List<Venda>> relatorioVendas = vendas.stream().collect(Collectors.groupingBy(Venda::getData));
                     relatorioVendas.entrySet().forEach(venda -> System.out.printf("Período de emissão: %s \n%s", venda.getKey().format(df), venda.getValue()));

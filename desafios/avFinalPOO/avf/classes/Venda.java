@@ -39,7 +39,7 @@ public class Venda  {
     public String toString() {
         String relVendas = "";
 
-        relVendas = relVendas + "Data: " + getData();
+        relVendas = relVendas + "\n\nData: " + getData();
         relVendas = relVendas + "\nProduto: " + produto.getNome();
         relVendas = relVendas + "\nQuantidade: " + getQtdVenda() + " unidade(s)";
         relVendas = relVendas + "\nValor unitário: R$ " + produto.getValor();
